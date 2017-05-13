@@ -2,7 +2,7 @@ requirejs.config({
     baseUrl: 'js'
 });
 
-requirejs(["vendor/vue","vendor/vue-router", "Home", "Images"],
+requirejs(["vendor/vue","vendor/vue-router", "home", "images"],
 (Vue, VueRouter, Home, Images) => {
 "use strict";
 
