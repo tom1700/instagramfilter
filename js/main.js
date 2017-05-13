@@ -13,7 +13,6 @@ const router = new VueRouter({
         { path:'/', component:Home },
         { path:'/images', component:Images }
     ],
-    mode:"history",
     base:"instagramfilter"
 });
 
