@@ -12,7 +12,8 @@ const router = new VueRouter({
     routes:[
         { path:'/', component:Home },
         { path:'/images', component:Images }
-    ]
+    ],
+    mode:"history"
 });
 
 new Vue({
