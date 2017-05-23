@@ -20,10 +20,12 @@ export default {
     name :"il-home",
     methods : {
         login () {
-            const url = "https://api.instagram.com/oauth/authorize/";
+            const base = "https://api.instagram.com/oauth/authorize/";
             const client_id = "458a7a8e2850426699015a9e75813a43";
             const redirect_uri = "https://tom1700.github.io/instagramfilter/#/images";
-            location.href = `${url}?client_id=${client_id}&redirect_uri=${redirect_uri}&response_type=token`;
+            const url = `${base}?client_id=${client_id}&response_type=token&redirect_uri=${redirect_uri}`;
+            console.log(url);
+            location.href = url;
         }
     },
     data : () => { return {}; }

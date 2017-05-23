@@ -20453,10 +20453,12 @@ exports.default = {
     name: "il-home",
     methods: {
         login: function login() {
-            var url = "https://api.instagram.com/oauth/authorize/";
+            var base = "https://api.instagram.com/oauth/authorize/";
             var client_id = "458a7a8e2850426699015a9e75813a43";
             var redirect_uri = "https://tom1700.github.io/instagramfilter/#/images";
-            location.href = url + "?client_id=" + client_id + "&redirect_uri=" + redirect_uri + "&response_type=token";
+            var url = base + "?client_id=" + client_id + "&response_type=token&redirect_uri=" + redirect_uri;
+            console.log(url);
+            location.href = url;
         }
     },
     data: function data() {
@@ -20478,7 +20480,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-147df12c", __vue__options__)
   } else {
-    hotAPI.reload("data-v-147df12c", __vue__options__)
+    hotAPI.rerender("data-v-147df12c", __vue__options__)
   }
 })()}
 });
@@ -20490,7 +20492,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.default = component = {
+exports.default = {
     name: "il-images"
 };
 })()
@@ -20507,7 +20509,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-bd54ddf6", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-bd54ddf6", __vue__options__)
+    hotAPI.reload("data-v-bd54ddf6", __vue__options__)
   }
 })()}
 });

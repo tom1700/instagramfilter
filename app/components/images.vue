@@ -35,7 +35,7 @@
 
 <script>
 
-export default component = {
+export default {
     name:"il-images"
 };
 
