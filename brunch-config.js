@@ -7,6 +7,7 @@ module.exports = {
             joinTo: 'app.js'
         }
     },
+    npm: {enabled: true},
     plugins: {
         babel: {
             presets: ['es2015']

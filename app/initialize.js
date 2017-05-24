@@ -1,10 +1,9 @@
 import Vue from 'vue';
 import 'babel-polyfill';
 import "vueify/lib/insert-css"
-//import store from './state/store';
+import store from './state/store';
 import VueRouter from 'vue-router';
 import routes from './config/routes';
-
 //
 // Vue extensions
 // Here we tell Vue that we want to add extra functionality to the application.
@@ -32,8 +31,7 @@ Vue.config.devtools = (environment === 'development');
 // 
 
 let router = new VueRouter({
-    history: true,
-    base:"instagramfilter",
+    mode: 'history',
     routes: routes
 });
 
@@ -44,8 +42,8 @@ let router = new VueRouter({
 
 const app = new Vue({
     router,
+    store,
     render (h) {
         return h('router-view');
     }
-    //store
 }).$mount('#content');
