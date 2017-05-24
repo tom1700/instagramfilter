@@ -9,7 +9,8 @@
   },
   "scripts": {
     "watch": "brunch watch --server",
-    "build": "brunch build --production"
+    "build": "brunch build --production",
+    "prod": "brunch build --production && git add public && git add app && git add package.json && git add brunch-config.js && git commit -m 'update' && git push origin master"
   },
   "dependencies": {
     "axios": "^0.16.1",
