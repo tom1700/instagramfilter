@@ -27,6 +27,11 @@ export default {
             location.href = url;
         }
     },
+    mounted () {
+        if (this.$store.state.auth.token) {
+            this.$router.push({ name : "images" });
+        }
+    },
     data : () => { return {}; }
 };
 
